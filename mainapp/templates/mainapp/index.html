@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Магазин</title>
-	<link rel="stylesheet" type="text/css" href="/static/style.css">
-	<link rel="stylesheet" href="/static/fonts/font-awesome/css/font-awesome.css">
-</head>
-<body>
-	<div class="container">
+{% extends 'mainapp/base.html' %}
+<!-- {% load static %} -->
+{% block content %}
 		<div class="slider">
 			<div class="header clearfix">
 				<a href="index.html" class="logo"></a>
 				<ul class="menu">
-					<li><a href="/" class="active">домой</a></li>
-					<li><a href="/products/">продукты</a></li>
-					<li><a href="/contact/">контакты</a></li>
+					{% include 'mainapp/includes/inc_main_menu.html' %}
 				</ul>
 				<a href="#" class="search"></a>
 			</div>
@@ -22,13 +13,22 @@
 				<h3 class="green">тенденции</h3>
 				<h3 class="big"> удобные стулья</h3>
 				<p>Новый уровень комфорта. Отличные характеристики.</p>
-				<a href="#" class="button-order">заказать <img src="/static/img/arrow.png" alt=""></a>
+				<a href="#" class="button-order">заказать <img src="{% static 'img/arrow.png' %}" alt=""></a>
 			</div>	
 			<div class="navi">
 				<a href="#"></a><a href="#"></a><a href="#"></a>
 			</div>
 		</div>
-
+		{{some_name}}
+		{% if some_condition %}
+			{{another_variable}}
+		{% else %}
+			nothing
+		{% endif %}
+		skills: {% for item in item_list %}
+			{{item}}
+		{% endfor %}
+		{% now "Y" %}
 		<div class="featured">
 			<div class="featured-menu">
 					<a class="active" href="#">Популярные</a><a href="#">Новинки</a>
@@ -57,37 +57,4 @@
 				</div>	
 			</div>
 		</div>
-		
-		<div class="clr"></div>
-
-	</div>
-
-    <div class="footer">
-        <div class="clearfix">
-            <div class="text-footer">
-                <h3>контакты</h3>
-            </div>
-            <div class="text-footer">
-                <h3>полезная информация</h3>
-            </div>
-            <div class="text-footer clearfix">
-                <h3>Оставайтесь на связи</h3>
-                <p>Подписаться на новости и рассылки</p>
-                <form>
-                    <input type="email" name="email" placeholder="ваш email">
-                    <a href="#"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></a>
-                </form>
-            </div>
-        </div>
-        <p class="small">&copy; GB 2017</p>
-        <div class="social">
-            <a href="#" class="social1"></a>
-            <a href="#" class="social2"></a>
-            <a href="#" class="social3"></a>
-            <a href="#" class="social4"></a>
-        </div>
-        <p class="small">Положения &amp; Условия  /  Конфиденциальность &amp; Cookies</p>
-    </div>	
-	
-</body>
-</html>
+{% endblock %}		
