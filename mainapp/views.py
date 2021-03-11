@@ -24,8 +24,11 @@ def products(request):
 
 
 def contact(request):
-    return render(request, 'mainapp/contact.html', context= {
-        'title':'Контакты'
-    })
+    title = 'О нас'
+    locations = []
+    with open(os.path.join(settings.BASE_DIR, 'contacts.json')) as f:
+        pass
+    context = {'title':title, 'location': locations}
+    return render(request, 'mainapp/contact.html', context)
 
 
