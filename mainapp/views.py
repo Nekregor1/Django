@@ -33,7 +33,7 @@ def contact(request):
     title = 'О нас'
     locations = []
 
-    with open(os.path.join(settings.BASE_DIR, 'contacts.json'), encoding='utf-8') as f:
+    with open(os.path.join(settings.BASE_DIR, f'mainapp/json/contact_locations.json'), encoding='utf-8') as f:
         locations = json.load(f)
     context = {'title':title, 'locations': locations}
 
