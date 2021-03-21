@@ -3,12 +3,8 @@
 {% block content %}
 		<div class="hero-white">
 			<div class="header clearfix">
-				<a href="index.html" class="logo"></a>
-				<ul class="menu">
-					{% include 'mainapp/includes/inc_main_menu.html' %}
-				</ul>
-				<a href="#" class="search"></a>
-                <a href="#" class="basket"></a>
+				<a href="{% url 'main' %}" class="logo"></a>
+				{% include 'mainapp/includes/inc_main_menu.html' %}
 			</div>
 		</div>
 
