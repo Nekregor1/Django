@@ -1,6 +1,7 @@
 import datetime
 import os
 import json
+import random
 
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404
@@ -10,18 +11,27 @@ from basketapp.models import Basket
 
 # Create your views here.
 
+def get_basket(user):
+    if user.is_authenticated:
+        return Basket.objects.filter(user=user)
+    return []
+
+def get_same_products(hot_product):
+    same_products = Product.objects.filter(category=hot_product.category).exclude(pk=hot_product.pk)[:3]
+    return same_products
+
+def get_hot_product():
+    products_list = Product.objects.all()
+    return random.sample(list(products_list), 1)[0]
+
 def main(request):
     title = 'главная'
     products = Product.objects.all()[:4]
-    context = {'title': title, 'products': products}
+    context = {'title': title, 'products': products, 'basket': get_basket(request.user)}
     return render(request, 'mainapp/index.html', context)
 
 
 def products(request, pk=None):
-    basket = 0
-    if request.user.is_authenticated:
-        basket = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
-
     title = 'Продукты'
     links_menu = ProductCategory.objects.all()
     if pk is not None:
@@ -37,16 +47,19 @@ def products(request, pk=None):
             'links_menu': links_menu,
             'category': category_item,
             'products': products_list,
-            'basket': basket
+            'basket': get_basket(request.user)
         }
         return render(request, 'mainapp/products_list.html', context)
 
-    same_products = Product.objects.all()[:4]
+    hot_product = get_hot_product()
+    same_products = get_same_products(hot_product)
+
     context={
         'title': title,
         'links_menu': links_menu,
         'same_products': same_products,
-        'basket': basket
+        'hot_product': hot_product,
+        'basket': get_basket(request.user)
     }
 
     return render(request, 'mainapp/products.html',context)
@@ -59,7 +72,7 @@ def contact(request):
 
     with open(os.path.join(settings.BASE_DIR, f'mainapp/json/contact_locations.json'), encoding='utf-8') as f:
         locations = json.load(f)
-    context = {'title':title, 'locations': locations}
+    context = {'title':title, 'locations': locations, 'basket': get_basket(request.user)}
 
     return render(request, 'mainapp/contact.html', context)
 
