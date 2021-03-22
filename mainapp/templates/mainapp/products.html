@@ -58,9 +58,9 @@
 				<div class="related-products clearfix">
 					{% for product in same_products %}
 						<div class="block">
-							<a href="#"><img src="/media/{{product.image}}" alt="{{product.short_desc}">
+							<a href="{% url 'products:product' product.pk %}"><img src="/media/{{ product.image }}" alt="{{product.short_desc}">
 								<div class="text">
-									<img src="/static/img/icon-hover.png" alt="img">
+									<img src="{% static 'img/icon-hover.png' %}" alt="img">
 									<h3>Категория: {{product.category.name}}</h3>
 									<h4>Название: {{product.name}}</h4>
 									<p>Описание: {{product.description}}</p>
