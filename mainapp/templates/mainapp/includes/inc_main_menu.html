@@ -6,8 +6,7 @@
     </li>
 
     <li>
-        <a href="{% url 'products:products' %}" {% if 'products' in request.resolver_match.namespace %} class="active"
-            {% endif %}>
+        <a href="{% url 'products:products' %}" {% if 'products' in request.resolver_match.namespace %} class="active" {% endif %}>
             продукты
         </a>
     </li>
@@ -18,24 +17,23 @@
         </a>
     </li>
     {% if user.is_authenticated %}
-
     <li>
         <a href="{% url 'auth:edit' %}">
             {{user.first_name|default:"Пользователь"}}
         </a>
     </li>
-
+    {% endif %} {% if user.is_superuser %}
     <li>
-        <a href="{% url 'auth:logout' %}">выход
-        </a>
-    </li>
-    {% else %}
+        <a href="{% url 'adminapp:user_read' %}">
+                Админка
+            </a>
+    </li> {% endif %}
     <li>
-        <a href="{% url 'auth:login' %}">вход
-        </a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'auth:logout' %}">выход</a> {% else %}
+        <a href="{% url 'auth:login' %}">вход</a> {% endif %}
     </li>
 
-    {% endif %}
 
 </ul>
 
