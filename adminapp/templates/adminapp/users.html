@@ -1,0 +1,46 @@
+{% extends "adminapp/base.html" %} 
+{% load static %} 
+{% block content %}
+<div class="users_list">
+	<button class="new_user">
+		<a href="{% url 'adminapp:user_create' %}">новый пользователь</a>
+	</button>
+	{% for object in objects %}
+	<div class="user_record">
+		<img src="/media/{{ object.avatar|default:'users_avatars/user1.jpg'}}" />
+		<div class="user_role">
+			{% if object.is_superuser %}
+                администратор 
+            {% else %}
+                пользователь
+            {% endif %}
+            <button>
+			    <a href="{% url 'adminapp:user_update' object.pk %}">редактировать</a>
+		    </button>
+		    <button>
+			    <a href="{% url 'adminapp:user_delete' object.pk %}">удалить</a>
+		    </button>
+		</div>
+
+		<div class="user_name">
+			<p>
+				<strong>{{object.username}}</strong>
+			</p>
+			<p>
+				{% if object.first_name %}
+                    {{ object.first_name|title }} 
+                    {% if object.last_name %} 
+                        {{ object.last_name }} 
+                    {% endif %}
+                {% endif %}
+			</p>
+		</div>
+		<div class="user_age">age:<br />{{ object.age }}</div>
+		<div class="user_email">email:<br />{{ object.email }}</div>
+		<div class="user_lastlogin">logged:<br />{{ object.last_login|date:"d-m-Y" }}
+		</div>
+	</div>
+
+	{% endfor %}
+</div>
+{% endblock content %}
