@@ -5,7 +5,7 @@
 	<button class="new_user">
 		<a href="{% url 'adminapp:user_create' %}">новый пользователь</a>
 	</button>
-	{% for object in objects %}
+	{% for object in object_list %}
 	<div class="user_record {% if not object.is_active %}not_active{% endif %}">
 		<img src="/media/{{ object.avatar|default:'users_avatars/user1.jpg'}}" />
 		<div class="user_role">

@@ -5,6 +5,7 @@ import random
 
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from mainapp.models import Product, ProductCategory
 from basketapp.models import Basket
@@ -34,19 +35,29 @@ def main(request):
 def products(request, pk=None):
     title = 'Продукты'
     links_menu = ProductCategory.objects.all()
+    page = request.GET.get('p',1)
     if pk is not None:
         if pk == 0:
-            products_list = Product.objects.all().order_by('price')
+            products = Product.objects.all().order_by('price')
             category_item = {'name':'все','pk':0}
         else:
             category_item = get_object_or_404(ProductCategory, pk=pk)
-            products_list = Product.objects.filter(category=category_item)
+            products = Product.objects.filter(category=category_item)
+
+        paginator = Paginator(products, 2)
+
+        try:
+            products_paginator = paginator.page(page)
+        except PageNotAnInteger:
+            products_paginator = paginator.page(1)
+        except EmptyPage:
+            products_paginator = paginator.page(paginator.num_pages)
 
         context = {
             'title': title,
             'links_menu': links_menu,
             'category': category_item,
-            'products': products_list,
+            'products': products_paginator,
             'basket': get_basket(request.user)
         }
         return render(request, 'mainapp/products_list.html', context)
