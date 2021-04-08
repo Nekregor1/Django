@@ -35,7 +35,7 @@
             {% for product in products %}
             <div class="block">
                 <a href="{% url 'products:product' product.pk %} ">
-                    <img src="/media/{{ product.image }}" alt="product">
+                    <img src="/media/{{ product.image|default:'products_images/default.jpg' }}" alt="product">
                     <div class="text">
 							<img src="/static/img/icon-hover.png" alt="img">
 							<h3>Категория: {{product.category.name}}</h3>

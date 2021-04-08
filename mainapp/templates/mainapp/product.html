@@ -16,21 +16,21 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
-						<img src="/media/{{ product.image }}">
+						<img src="/media/{{ product.image|default:'products_images/default.jpg' }}">
 					</div>
 					<div class="slider-control">
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image|default:'products_images/default.jpg' }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image|default:'products_images/default.jpg' }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image|default:'products_images/default.jpg' }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
