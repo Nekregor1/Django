@@ -27,12 +27,15 @@
 			<div class="tab-content">
 				{% for product in products %}
 				<div class="block">
-					<a href="#"><img src="/media/{{ product.image }}" alt="{{ product.name }}">
+					<a href="{% url 'products:product' product.pk %}"><img src="/media/{{ product.image }}" alt="{{ product.name }}">
 						<div class="text">
-							<img src="{% static 'img/icon-hover.png'%}" alt="{{ product.name }}">
-							<h4>{{ product.name }}</h4>
-							<p>{{ product.short_desc }}</p>
-						</div> 
+							<img src="/static/img/icon-hover.png" alt="img">
+							<h3>Категория: {{product.category.name}}</h3>
+							<h4>Название: {{product.name}}</h4>
+							{% comment %} <p>Описание: {{product.description}}</p> {% endcomment %}
+							<p>Цена: {{product.price}}</p>
+							<p>На складе: {{product.quantity }}</p>
+						</div>
 					</a>
 				</div>
 				{% endfor %}

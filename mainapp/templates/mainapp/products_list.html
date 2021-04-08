@@ -18,21 +18,32 @@
 
     <div class="products_list">
         <div class="title clearfix">
-            <h2>
-                Категория: "{{ category.name|title }}"
-            </h2>
+            <h2>Категория: "{{ category.name|title }}"</h2>
+            <div class="pagination">
+                {% if products.has_previous %}
+                    <a href="{% url 'products:category' category.pk %}?p={{ products.previous_page_number }}"> < </a>
+                {% endif %}
+                <span class="current">
+                    страница {{ products.number }} из {{ products.paginator.num_pages }}
+                </span>
+                {% if products.has_next %}
+                    <a href="{% url 'products:category' category.pk %}?p={{ products.next_page_number }}"> > </a>
+                {% endif %}
+            </div>
         </div>
         <div class="category-products clearfix">
-
             {% for product in products %}
             <div class="block">
-                <a href="{% url 'basket:add' product.pk %} ">
+                <a href="{% url 'products:product' product.pk %} ">
                     <img src="/media/{{ product.image }}" alt="product">
                     <div class="text">
-                        <img src="{% static 'img/icon-hover.png' %}" alt="hover">
-                        <h4>{{ product.name }}</h4>
-                        <p>{{ product.description }}</p>
-                    </div>
+							<img src="/static/img/icon-hover.png" alt="img">
+							<h3>Категория: {{product.category.name}}</h3>
+							<h4>Название: {{product.name}}</h4>
+							<p>Описание: {{product.description}}</p>
+							<p>Цена: {{product.price}}</p>
+							<p>На складе: {{product.quantity }}</p>
+						</div>
                 </a>
             </div>
             {% endfor %}
