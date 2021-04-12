@@ -1,5 +1,10 @@
-from django.urls import path
 from basketapp import views as basketapp
+
+# Django 2.0
+# from django.urls import re_path
+
+# Django 3
+from django.urls import path
 
 app_name = 'basketapp'
 

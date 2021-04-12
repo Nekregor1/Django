@@ -12,10 +12,10 @@ from basketapp.models import Basket
 
 # Create your views here.
 
-def get_basket(user):
-    if user.is_authenticated:
-        return Basket.objects.filter(user=user)
-    return []
+# def get_basket(user):
+#     if user.is_authenticated:
+#         return Basket.objects.filter(user=user)
+#     return []
 
 def get_same_products(hot_product):
     same_products = Product.objects.filter(category=hot_product.category).exclude(pk=hot_product.pk)[:3]
@@ -28,7 +28,12 @@ def get_hot_product():
 def main(request):
     title = 'главная'
     products = Product.objects.all()[:4]
-    context = {'title': title, 'products': products, 'basket': get_basket(request.user)}
+    context = {
+        'title': title,
+        'products': products,
+        # 'basket': get_basket(request.user)
+    }
+
     return render(request, 'mainapp/index.html', context)
 
 
@@ -58,7 +63,7 @@ def products(request, pk=None):
             'links_menu': links_menu,
             'category': category_item,
             'products': products_paginator,
-            'basket': get_basket(request.user)
+            # 'basket': get_basket(request.user)
         }
         return render(request, 'mainapp/products_list.html', context)
 
@@ -70,7 +75,7 @@ def products(request, pk=None):
         'links_menu': links_menu,
         'same_products': same_products,
         'hot_product': hot_product,
-        'basket': get_basket(request.user)
+        # 'basket': get_basket(request.user)
     }
 
     return render(request, 'mainapp/products.html',context)
@@ -80,7 +85,7 @@ def product(request, pk):
         'title': 'продукт',
         'links_menu': ProductCategory.objects.all(),
         'product': get_object_or_404(Product, pk=pk),
-        'basket': get_basket(request.user)
+        # 'basket': get_basket(request.user)
     }
     return render(request, 'mainapp/product.html',context)
 
@@ -90,7 +95,11 @@ def contact(request):
 
     with open(os.path.join(settings.BASE_DIR, f'mainapp/json/contact_locations.json'), encoding='utf-8') as f:
         locations = json.load(f)
-    context = {'title':title, 'locations': locations, 'basket': get_basket(request.user)}
+    context = {
+        'title':title,
+        'locations': locations,
+        # 'basket': get_basket(request.user)
+    }
 
     return render(request, 'mainapp/contact.html', context)
 

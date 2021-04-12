@@ -1,3 +1,16 @@
 {
-    "editor.fontSize": 18
+    "python.linting.pylintArgs": [
+        // "--load-plugins=pylint_django"
+        "--load-plugins",
+          "pylint_django",
+          "--load-plugins",
+          "pylint_django.checkers.migrations",
+          "--disable=C0114, C0115, W0222",
+          "--disable=imported-auth-user",
+          "--disable=invalid-name",
+          "--disable=line-too-long",
+          "--errors-only"
+   ],
+    "editor.fontSize": 18,
+    "git.ignoreLimitWarning": true
 }
