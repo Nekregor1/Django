@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_django',
+
     'mainapp',
     'authapp',
     'basketapp',
@@ -150,10 +152,19 @@ EMAIL_HOST_PASSWORD = 'geekshop'
 EMAIL_USE_SSL = False
 
 
-# for python
+# for python -m smtpd -n -c DebuggingServer localhost:25
 # EMAIL_HOST_USER = None
 # EMAIL_HOST_PASSWORD = None
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/email-messages/'
+
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2',
+)
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7829148'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'xPYHPA9sTYfvFa12H7LR'
