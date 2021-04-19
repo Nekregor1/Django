@@ -46,5 +46,14 @@ def save_user_profile(backend, user, response, *args, **kwargs):
             user.delete()
             raise AuthForbidden('social_core.backends.vk.VKOAuth2')
 
+
+    if data['photo_max']:
+        photo = requests.get(data['photo_max'])
+        if photo.status_code == 200:
+            photo_name = f'/users_avatars/{user.pk}.jpg'
+            with open(f'media/{photo_name}', 'wb') as avatar:
+                avatar.write(photo.content)
+                user.avatar = photo_name
+
     user.save()
 
