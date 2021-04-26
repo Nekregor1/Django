@@ -15,5 +15,10 @@
             регистрация
         </a>
     </button>
+    <button class="btn btn-link from-control">
+        <a href="{% url 'social:begin' 'vk-oauth2'%}?next=/" class="">
+            вход через VK
+        </a>
+    </button>
 {% endblock content %}
 

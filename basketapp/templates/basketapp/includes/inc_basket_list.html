@@ -1,6 +1,6 @@
 {% for item in basket_items %}
 <div class="basket_record">
-  <img src="/media/{{ item.product.image }}" />
+  <img src="/media/{{ item.product.image|default:'products_images/default.jpg' }}" />
   <span class="category_name">{{item.product.category.name}}</span>
   <span class="category_name">{{item.product.name}}</span>
   <span class="category_name">{{item.product.price}} руб.</span>
