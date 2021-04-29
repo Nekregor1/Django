@@ -27,6 +27,7 @@ SECRET_KEY = '0t(c!+6d2k7!5wxhz9z4dtt5xv96)49wl(^eb8!5)xyjb9(xf)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -93,6 +94,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'NAME': 'geekshop',
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'USER': 'postgres'
+    # }
 }
 
 

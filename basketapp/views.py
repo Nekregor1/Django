@@ -42,7 +42,20 @@ def basket_add(request, pk):
     else:
         new_basket_item = Basket(user=request.user, product=product)
         new_basket_item.quantity +=1
-        new_basket_item.save(update_fields=['quantity', 'product'])
+        new_basket_item.save()
+        # new_basket_item.save(update_fields=['quantity', 'product']) #Странно но так не работает. Сломалась корзина
+            # ValueError at /basket/add/5/
+            # Cannot force an update in save() with no primary key.
+            # Request Method:	GET
+            # Request URL:	http://127.0.0.1:8080/basket/add/5/
+            # Django Version:	3.2
+            # Exception Type:	ValueError
+            # Exception Value:	
+            # Cannot force an update in save() with no primary key.
+            # Exception Location:	D:\Nekrasov\GeekBrains\Django\Django\django_3\lib\site-packages\django\db\models\base.py, line 828, in _save_table
+            # Python Executable:	D:\Nekrasov\GeekBrains\Django\Django\django_3\Scripts\python.exe
+
+
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
