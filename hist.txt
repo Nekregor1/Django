@@ -1,0 +1,90 @@
+1  logout
+    2  apt install mc
+    3  mc
+    4  mcedit
+    5  mcedit /etc/postgresql
+    6  mcedit /etc/postgresql/12/main/pg_hba.conf
+    7  systemctl restart postgresql
+    8  psql -U postgres
+    9  cd /var/www/html
+   10  ls
+   11  cd
+   12  useradd -g www-data -m django
+   13  cd /home/django
+   14  ls
+   15  g clone git@github.com:Nekregor1/Django.git
+   16  ls
+   17  cd Django
+   18  git checkout les13
+   19  cd home
+   20  cd /home/django
+   21  ls
+   22  cd Django
+   23  ls
+   24  git checkout main
+   25  python -m venv django_3
+   26  python3 -m venv django_3
+   27  gst
+   28  ls
+   29  git status
+   30  source django_3/bin/activate
+   31  git checkout les13
+   32  ls
+   33  pip3 install -r requirements.txt
+   34  pip3 install gunicorn
+   35  pip3 install wheel
+   36  pip3 install gunicorn
+   37  python
+   38  python manage.py migrate
+   39  git status
+   40  git pull
+   41  git status
+   42  python manage.py migrate
+   43  python manage.py fill_db
+   44  python manage.py fill
+   45  python manage.py runserver
+   46  python manage.py runserver 0.0.0.0:8000
+   47  git status
+   48  git pull
+   49  python manage.py runserver 0.0.0.0:8000
+   50  ls -la
+   51  chown -R django /home/django/Django
+   52  ls -la
+   53  mcedit /etc/systemd/system/gunicorn.service
+   54  systemctl enable gunicorn
+   55  mcedit /etc/systemd/system/gunicorn.service
+   56  systemctl enable gunicorn
+   57  systemctl start gunicorn
+   58  systemctl status gunicorn
+   59  apt install htop
+   60  htop
+   61  systemctl status gunicorn
+   62  mcedit /etc/nginx/sites-available/geekshop
+   63  ln -s /ect/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+   64  nginx -t
+   65  mcedit /etc/nginx/sites-available/geekshop
+   66  cd ../
+   67  cd ~
+   68  ls
+   69  cd /home
+   70  ls
+   71  cd django
+   72  ls
+   73  cd Django
+   74  ls
+   75  ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+   76  cd etc/nginx
+   77  cd /etc
+   78  cd /nginx
+   79  ls
+   80  cd nginx
+   81  ls
+   82  cd sites-enabled
+   83  ls
+   84  rm geekshop
+   85  ls
+   86  cd /home/django/Django
+   87  ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+   88  nginx -t
+   89  mc
+   90  systemctl restart nginx
