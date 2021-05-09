@@ -27,7 +27,7 @@ def get_hot_product():
 
 def main(request):
     title = 'главная'
-    products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:3]
+    products = Product.objects.all()[:4]
     context = {
         'title': title,
         'products': products,
