@@ -158,6 +158,8 @@ LOGIN_URL = '/auth/login/'
 
 BASE_URL = 'http://localhost:8080'
 
+
+# для локального использования
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'django@gb.local'
@@ -165,11 +167,20 @@ EMAIL_HOST_PASSWORD = 'geekshop'
 EMAIL_USE_SSL = False
 
 
+# для яндекса
+# EMAIL_HOST = 'smtp.yandex.ru'
+# EMAIL_PORT = '465'
+# EMAIL_HOST_USER = 'mail@yandex.ru'
+# EMAIL_HOST_PASSWORD = 'password'
+# EMAIL_USE_SSL = True
+
+
 # for python -m smtpd -n -c DebuggingServer localhost:25
 # EMAIL_HOST_USER = None
 # EMAIL_HOST_PASSWORD = None
 
 
+# вариант логирования сообщений почты в виде файлов вместо отправки
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/email-messages/'
 
