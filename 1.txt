@@ -1,0 +1,571 @@
+POST /auth/login/ HTTP/1.1
+Host: 185.46.8.26
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+Content-type: application/x-www-form-urlencoded
+Content-length: 35
+
+username=django&password=geekbrains
+
+HTTP/1.1 302 Found
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /
+Server-Timing: TimerPanel_utime;dur=601.9879999999999;desc="User CPU time", TimerPanel_stime;dur=23.520999999999994;desc="System CPU time", TimerPanel_total;dur=625.5089999999999;desc="Total CPU time", TimerPanel_total_time;dur=633.7473392486572;desc="Elapsed time", SQLPanel_sql_time;dur=8.848190307617188;desc="SQL 8 queries", CachePanel_total_time;dur=0;desc="Cache 0 Calls"
+X-Frame-Options: DENY
+Vary: Cookie
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Set-Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff; expires=Sun, 23 May 2021 21:16:10 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax
+
+GET / HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Server-Timing: TimerPanel_utime;dur=216.38500000000005;desc="User CPU time", TimerPanel_stime;dur=23.592000000000002;desc="System CPU time", TimerPanel_total;dur=239.97700000000006;desc="Total CPU time", TimerPanel_total_time;dur=242.67840385437012;desc="Elapsed time", SQLPanel_sql_time;dur=2.6264190673828125;desc="SQL 15 queries", CachePanel_total_time;dur=0;desc="Cache 0 Calls"
+X-Frame-Options: DENY
+Vary: Cookie
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Content-Encoding: gzip
+
+
+GET /static/debug_toolbar/js/toolbar.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 10452
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-28d4"
+Accept-Ranges: bytes
+
+
+GET /static/debug_toolbar/css/toolbar.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 11461
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-2cc5"
+Accept-Ranges: bytes
+
+
+GET /static/debug_toolbar/css/print.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 43
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-2b"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-4.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 7944
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1f08"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-3.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 5127
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1407"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-2.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 6906
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1afa"
+Accept-Ranges: bytes
+
+
+GET /static/img/icon-hover.png HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/png
+Content-Length: 1718
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-6b6"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-1.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 3718
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-e86"
+Accept-Ranges: bytes
+
+
+GET /static/img/arrow.png HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/png
+Content-Length: 327
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-147"
+Accept-Ranges: bytes
+
+
+GET /static/js/bootstrap.min.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 37045
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-90b5"
+Accept-Ranges: bytes
+
+
+GET /static/js/jquery-3.2.1.min.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 86659
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-15283"
+Accept-Ranges: bytes
+
+
+GET /static/fonts/font-awesome/css/font-awesome.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 37414
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-9226"
+Accept-Ranges: bytes
+
+
+GET /static/css/style.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 28295
+Last-Modified: Thu, 06 May 2021 12:42:23 GMT
+Connection: close
+ETag: "6093e42f-6e87"
+Accept-Ranges: bytes
+
+
+GET /static/css/bootstrap.min.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 121200
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1d970"
+Accept-Ranges: bytes
+
+
+GET /basket/ HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Server-Timing: TimerPanel_utime;dur=239.28499999999997;desc="User CPU time", TimerPanel_stime;dur=19.943;desc="System CPU time", TimerPanel_total;dur=259.22799999999995;desc="Total CPU time", TimerPanel_total_time;dur=259.9039077758789;desc="Elapsed time", SQLPanel_sql_time;dur=2.552032470703125;desc="SQL 16 queries", CachePanel_total_time;dur=0;desc="Cache 0 Calls"
+X-Frame-Options: DENY
+Vary: Cookie
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Content-Encoding: gzip
+
+
+GET /static/debug_toolbar/js/toolbar.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 10452
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-28d4"
+Accept-Ranges: bytes
+
+
+GET /static/debug_toolbar/css/toolbar.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 11461
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-2cc5"
+Accept-Ranges: bytes
+
+
+GET /static/debug_toolbar/css/print.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 43
+Last-Modified: Sun, 09 May 2021 18:26:52 GMT
+Connection: close
+ETag: "6098296c-2b"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-41.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 10268
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-281c"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-21.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 6600
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-19c8"
+Accept-Ranges: bytes
+
+
+GET /media/products_images/product-4.jpg HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: image/jpeg
+Content-Length: 7944
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1f08"
+Accept-Ranges: bytes
+
+
+GET /static/js/basket_script.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 446
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1be"
+Accept-Ranges: bytes
+
+
+GET /static/js/jquery-3.2.1.min.js HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: application/javascript
+Content-Length: 86659
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-15283"
+Accept-Ranges: bytes
+
+
+GET /static/fonts/font-awesome/css/font-awesome.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 37414
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-9226"
+Accept-Ranges: bytes
+
+
+GET /static/css/style.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 28295
+Last-Modified: Thu, 06 May 2021 12:42:23 GMT
+Connection: close
+ETag: "6093e42f-6e87"
+Accept-Ranges: bytes
+
+
+GET /static/css/bootstrap.min.css HTTP/1.1
+Host: 185.46.8.26
+Cookie: sessionid=jjqy8w16szseb053h7otr0yj3b8zvgff
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sun, 09 May 2021 21:16:10 GMT
+Content-Type: text/css
+Content-Length: 121200
+Last-Modified: Thu, 29 Apr 2021 16:49:24 GMT
+Connection: close
+ETag: "608ae394-1d970"
+Accept-Ranges: bytes
+
+
