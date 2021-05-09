@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'adminapp',
     'ordersapp',
     'debug_toolbar',
-    'template_profiler_panel'
+    'template_profiler_panel',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -174,9 +175,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # для работы локально
-#STATICFILES_DIRS = (
+# STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'static'),
-#)
+# )
 
 
 MEDIA_URL = '/media/'
