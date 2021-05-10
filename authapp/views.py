@@ -4,12 +4,14 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.conf import settings
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
+
 
 from authapp.models import ShopUser
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm, ShopUserProfileEditForm
 # Create your views here.
 
-
+# @csrf_exempt
 def login(request):
     title = 'вход'
 

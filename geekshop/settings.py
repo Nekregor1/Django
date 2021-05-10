@@ -171,12 +171,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # для работы на сервере
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # для работы локально
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, 'static'),
+)
 
 
 MEDIA_URL = '/media/'
