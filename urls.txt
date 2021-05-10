@@ -1,2 +1,1 @@
-http://185.46.8.26/auth/login/ POST username=django&password=geekbrains
 http://185.46.8.26/basket/
