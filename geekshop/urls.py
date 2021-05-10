@@ -44,7 +44,16 @@ urlpatterns = [
     path('contact/', mainapp.contact, name = 'contact'),
     path('admin/', include('adminapp.urls', namespace='admin')),
     path('control/', admin.site.urls),
+
+    path('', include('social_django.urls', namespace='social')),
+
+    path('order/', include('ordersapp.urls', namespace = 'order')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]
